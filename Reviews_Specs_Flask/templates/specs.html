@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Specs Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="table-users">
+        <div class="header">Specification</div>
+        <table cellspacing="0">
+            {% for key,value in dictionary.items() %}
+            <tr>
+                <th>{{key}}</th>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <table>
+                            {% for x,y in value.items() %}
+                            <tr>
+                                <th>{{x}}</th>
+                                <td>{{y}}</td>
+                            </tr>
+                            {% endfor %}
+
+
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+
+
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+{% block head %}
+
+<title>Specs and Reviews of Product</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Specification and Reviews</h1>
+
+    <div class="form" style="text-align:center">
+        <form method="POST" name="flipkart">
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Reviews" onclick="flipkart.action='/review';">
+            <input type="submit" value="Specs" onclick="flipkart.action='/specs';">
+        </form>
+    </div>
+</div>
+{% endblock %}
